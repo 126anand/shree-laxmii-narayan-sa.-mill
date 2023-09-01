@@ -1,0 +1,961 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+
+}
+
+h1 {
+
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+
+}
+
+h4 {
+    font-size: 20px;
+
+    color: #222;
+
+}
+
+h6 {
+
+    font-weight: 700;
+    font-size: 12px;
+
+}
+
+P {
+
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+
+}
+
+.section-p1 {
+
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+    /* background-color: #e1f8f6; */
+}
+
+
+.logo {
+    display: flex;
+
+}
+
+.main a {
+    text-decoration: none;
+
+}
+
+.main {
+    display: flex;
+}
+
+.logo div {
+    font-family: 'Kaushan Script', cursive;
+    color: #088178;
+    font-size: 150%;
+    font-weight: bolder;
+    margin: auto;
+    padding: 0rem 0rem 0rem 2rem;
+}
+
+
+/* hrader starts */
+
+#header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 80px;
+
+    background: #E3E6F3;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+#header img {
+    width: 50px;
+}
+
+#navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+#navbar li a {
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #1a1a1a;
+
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a:active {
+    color: #088178;
+
+}
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+
+    content: "";
+
+    width: 30%;
+
+    height: 2px;
+
+    background: #088178;
+    position: absolute;
+
+    bottom: -4px;
+
+    left: 20px;
+
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#hero {
+
+    background-image: url("image/home.jpg");
+    height: 93vh;
+
+    width: 100%;
+
+
+    background-size: cover;
+
+    background-position: top 25% right 0;
+    padding: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4 {
+
+    padding-bottom: 15px;
+
+}
+
+#hero h1 {
+
+    color: #088178;
+
+}
+
+#hero button {
+
+    background-image: url("image/color3.png");
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: white;
+
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    font-size: 15px;
+}
+
+#hero button a {
+    text-decoration: none;
+    color: #088178;
+}
+
+.section-p1 .banner {
+    display: flex;
+    align-items: center;
+    /* To center items vertically */
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    padding-bottom: 20px;
+    /* Add space at the bottom for scrollbar */
+    background-color: #e6e3e5;
+}
+
+.fe-box {
+    flex: 0 0 auto;
+    /* Maintain the initial width of the boxes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    /* Set a fixed width for each box */
+    height: 200px;
+    /* Set a fixed height for each box */
+    margin-right: 20px;
+    /* Add spacing between boxes */
+}
+
+.fe-box:last-child {
+    margin-right: 0;
+    /* Remove spacing for the last box */
+}
+
+.fe-box img {
+    width: 100%;
+    /* Ensure the image takes up the entire width */
+    height: 100%;
+    /* Ensure the image takes up the entire height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the box */
+}
+
+.fe-box h6 {
+    margin-top: 10px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+
+    padding: 9px 8px 6px 8px;
+
+    line-height: 1;
+
+    border-radius: 4px;
+
+    color: #088178;
+
+    background-color: #e3dfd8;
+}
+
+#feature .fe-box:hover {
+
+    box-shadow: 10px 10px 54px rgba(22, 19, 63, 0.1);
+
+}
+
+
+
+.product1bgcolo {
+    background-color: #e1f8f6;
+    border-radius: 3rem 3rem 3rem 3rem;
+}
+
+#product1, #product2 {
+
+    text-align: center;
+}
+
+#product1 .pro-container, #product2 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro, #product2 .pro {
+
+    width: 23%;
+
+    min-width: 250px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #cce7d0;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    background-color: #b0e5e1;
+
+}
+
+#product1 .pro:hover, #product2 .pro:hover {
+
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img, #product2 .pro img {
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+#product1 .pro .des, #product2 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span, #product2 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+
+}
+
+#product1 .pro .des h5, #product2 .pro .des h5 {
+
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#producti .pro .des i {
+
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4, #product2 .pro .des h4 {
+
+    padding-top: 7px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+    color: #088178;
+
+}
+
+#product1 .pro .cart, #product2 .pro .cart {
+
+    width: 40px;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    border-radius: 50px;
+    background-color: #e8f6ea;
+
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.product2bgcolor {
+    background-color: white;
+}
+
+/* order section styling */
+form h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#order .right form .input,
+#order .right form .textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+
+}
+
+#order .right form .field input:focus, .contact .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+
+
+
+.right form .button button:hover {
+    color: #43e2e8;
+    background: none;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0px 4px;
+    display: inline-block;
+
+
+}
+
+.title {
+    text-align: center;
+}
+
+.maincontact {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-top: 1rem;
+
+}
+
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-button {
+    background-color: #58b4a5;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+.maincontact form {
+
+
+    border-radius: .5rem;
+
+    box-shadow: var (--box-shadow);
+
+    border: .1rem solid rgba(0, 0, 0, .2);
+
+    background: #e4e0bf;
+
+    margin: auto;
+}
+
+.maincontact form .inputBox {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+.maincontact .input {
+    width: 100%;
+}
+
+
+
+/* To remove aroow from number box */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#map h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+footer {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    background-color: #b0e5e1;
+
+}
+
+footer .col {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+}
+
+footer .logo {
+
+    margin-bottom: 10px;
+    width: 5rem;
+}
+
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 8px 0;
+}
+
+footer a {
+
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+
+}
+
+footer .follow {
+    margin-top: 20px;
+
+}
+
+footer .follow i {
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+
+footer .follow i:hover, footer a:hover {
+
+    color: #088178;
+
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+
+#page-header {
+
+    background-image: url("image/shop/banner.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2, #page-header p {
+    color: #fff;
+}
+
+#pagination {
+
+    text-align: center;
+
+}
+
+#pagination a {
+
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* sproduct styling start */
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details button {
+    background: #088178;
+    color: #fff;
+    padding: 13px 20px 13px;
+    border-radius: 8px;
+}
+
+#prodetails .single-pro-details span {
+    line-height: 25px;
+}
+
+#page-header-newproduct{
+    background-image: url("image/new.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#page-header-newproduct h2, #page-header-newproduct p {
+    color: #fff;
+}
+
+#pagination {
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Start Media Query */
+@media (max-width:1000px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #hero h1, #hero h2 {
+        font-size: 35px;
+    }
+
+    #product1 .pro-container, #product2 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro, #product2 .pro {
+        margin: 15px;
+    }
+
+    #header {
+
+        padding: 10px 40px;
+    }
+
+    .logo div {
+        width: 19rem;
+        font-size: 120%;
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+}
+
+@media (max-width:799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    #navbar {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        position: fixed;
+
+        top: 0;
+
+        right: -300px;
+
+        height: 100vh;
+        width: 300px;
+
+        background-color: #E3E6F3;
+
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+
+        top: 30px;
+
+        left: 30px;
+
+        color: #222;
+
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #hero h1, #hero h2 {
+        font-size: 35px;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+
+    }
+
+    #product1 .pro-container, #product2 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro, #product2 .pro {
+        margin: 15px;
+    }
+
+}
+
+@media (max-width: 477px) {
+    #header {
+        padding: 10px 20px;
+
+    }
+
+    h1 {
+
+        font-size: 38px;
+    }
+
+    h2 {
+
+        font-size: 32px;
+
+    }
+
+    #hero {
+
+        padding: 0 20px;
+
+        background-position: 55%;
+
+    }
+
+    .section-p1 {
+
+        padding: 20px 20px;
+    }
+
+    .maincontact form, .maincontact .input {
+        width: 100%;
+    }
+
+    .logo div {
+        font-size: 100%;
+        width: 15rem;
+
+    }
+
+
+    #hero h1, #hero h2 {
+        font-size: 20px;
+    }
+
+    #hero h4 {
+        padding-bottom: 0px;
+    }
+
+    #hero button {
+        padding: 14px 50px 14px 35px;
+
+    }
+
+    #hero p {
+        display: none;
+    }
+
+    /* Single Product */
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+    }
+
+}
