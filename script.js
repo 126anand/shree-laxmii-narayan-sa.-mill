@@ -17,3 +17,13 @@ if (close) {
     })
 
 }
+var MainImg = document.getElementById("MainImg");
+var smallimg = document.getElementsByClassName("small-img");
+
+for (var i = 0; i < smallimg.length; i++) {
+  smallimg[i].addEventListener("click", function () {
+    var tempSrc = MainImg.src; // Store the current MainImg source
+    MainImg.src = this.src; // Set the MainImg source to the clicked small image
+    this.src = tempSrc; // Set the clicked small image source to the previously displayed MainImg source
+  });
+}

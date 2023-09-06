@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <section id="header">
+
+        <div class="main">
+            <img src="image/logo.png" alt="Logo">
+            <a href="#" class="logo">
+                <div>Shree Laxmi Narayan Sa. Mill</div>
+            </a>
+        </div>
+
+        <div>
+
+            <ul id="navbar">
+
+                <li><a class="active" href="index.html">Home</a></li>
+
+                <li><a href="shop.html">Shop</a></li>
+
+                <li><a href="newproduct.html">New product</a></li>
+
+                <li><a href="order.html">Order</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+
+        </div>
+        <div id="mobile">
+
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+
+    </section>
+
+
+<!-- ... (your existing HTML) ... -->
+
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="cart-items">
+        <!-- Cart items will be added here dynamically -->
+    </tbody>
+</table>
+
+<div class="total">
+    <span>Total Rs: </span>
+    <span id="cart-total">0.00</span>
+</div>
+
+
+<button id="place-order">Place Order</button>
+
+
+
+
+<footer class="section-p1">
+    <div class="col">
+
+        <img class="logo" src="image/logo.png" alt="">
+        <h4>Contact</h4>
+
+        <p><strong>Address: </strong> Nearby Ghurmi Bridge, Golbazar 56500, Provience:-2, Nepal </p>
+
+        <p><strong>Email:</strong> madanthakur284@gmail.com</p>
+
+        <p><strong>Hours:</strong> 7:00am - 6:00pm, Sun - Sat</p>
+
+        <div class="follow">
+
+            <h4>Follow us</h4>
+
+            <div class="icon">
+
+                <i class="fab fa-facebook-f"></i>
+
+                <i class="fab fa-twitter"></i>
+
+                <i class="fab fa-instagram"></i>
+
+                <i class="fab fa-pinterest-p"></i>
+
+                <i class="fab fa-youtube"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col">
+
+        <h4>About</h4>
+
+        <a href="#">About us</a>
+
+        <a href="#">Delivery Information</a>
+
+        <a href="#">Privacy Policy</a> <a href="#">Terms & Conditions</a>
+
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="col">
+
+        <h4>My Account</h4>
+
+        <a href="#">Sign In</a>
+
+        <a href="#">View Cart</a>
+
+        <a href="#">My Wishlist</a> <a href="#">Track My Order</a>
+
+        <a href="#">Help</a>
+
+    </div>
+
+</footer>
+<footer class="section-p1">
+    <div class="copyright">
+
+        <p> Created by Anand @ 2023 All right reserved</p>
+    </div>
+
+</footer>
+
+<script>
+    // Function to get the cart from localStorage
+    function getCart() {
+        return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+   // Function to display cart items in cart.html
+function displayCart() {
+    const cartItems = getCart();
+    const cartItemsContainer = document.getElementById("cart-items");
+    let total = 0;
+
+    // Clear the cart items container
+    cartItemsContainer.innerHTML = "";
+
+    // Loop through cart items and display them
+    cartItems.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td><img src="${item.image}" alt="${item.name}" width="50"></td>
+            <td>${item.name}</td>
+            <td>${item.size}</td>
+            <td>${item.price.toFixed(2)}</td>
+            <td>${item.quantity}</td>
+            <td>${(item.price * item.quantity).toFixed(2)}</td>
+            <td><button onclick="removeItem(${index})">Remove</button></td>
+        `;
+        cartItemsContainer.appendChild(row);
+
+        // Calculate total price
+        total += item.price * item.quantity;
+    });
+
+    // Display the total in cart-total span
+    document.getElementById("cart-total").textContent = total.toFixed(2);
+}
+
+// Function to remove an item from the cart
+function removeItem(index) {
+    const cart = getCart();
+    
+    // Remove the item at the specified index
+    cart.splice(index, 1);
+
+    // Update the cart in localStorage
+    updateCart(cart);
+
+    // Refresh the cart display
+    displayCart();
+}
+
+// Call the displayCart function when the cart.html page loads
+window.addEventListener("load", displayCart);
+</script>
+ 
+<script src="cart.js"></script>
+   
+
+      
+</body>
+
+</html>
